@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => 'checking', 'namespace' => 'Checking', 'as' => 'checking.'], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'checking', 'namespace' => 'Checking', 'as' => 'checking.'], function(){
     Route::get('/', 'CheckController@index')->name('index');
     
     Route::group(['as' => 'show.', 'prefix' => 'show'], function(){
@@ -29,21 +29,21 @@ Route::group(['prefix' => 'checking', 'namespace' => 'Checking', 'as' => 'checki
     Route::post('/office/{office}', 'CheckController@store');
 });
 
-Route::group(['prefix' => 'offices', 'namespace' => 'Offices', 'as' => 'office.'], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'offices', 'namespace' => 'Offices', 'as' => 'office.'], function(){
     
     Route::get('/create', 'CreateOfficeController@show')->name('create');
     Route::post('/create', 'CreateOfficeController@store');
     
 });
 
-Route::group(['prefix' => 'group', 'namespace' => 'Group', 'as' => 'group.'], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'group', 'namespace' => 'Group', 'as' => 'group.'], function(){
     
     Route::get('create', 'CreateGroupController@show')->name('create');
     Route::post('create', 'CreateGroupController@store');
     
 });
 
-Route::group(['prefix' => 'officer', 'namespace' => 'Officer', 'as' => 'officer.'], function(){
+Route::group(['middleware' => 'auth', 'prefix' => 'officer', 'namespace' => 'Officer', 'as' => 'officer.'], function(){
     
     Route::get('/', 'OfficerController@group')->name('index');
     

@@ -1,0 +1,58 @@
+[Sat Oct 14 02:03:19.608869 2017] [mpm_prefork:notice] [pid 24360] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sat Oct 14 02:03:19.608954 2017] [core:notice] [pid 24360] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Oct 14 02:03:23.652135 2017] [mpm_prefork:notice] [pid 24360] AH00171: Graceful restart requested, doing restart
+[Sat Oct 14 02:03:23.678489 2017] [mpm_prefork:notice] [pid 24360] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sat Oct 14 02:03:23.678502 2017] [core:notice] [pid 24360] AH00094: Command line: '/usr/sbin/apache2'
+[Tue Oct 17 06:42:03.024621 2017] [core:warn] [pid 3371] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Oct 17 06:42:03.030700 2017] [mpm_prefork:notice] [pid 3371] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Tue Oct 17 06:42:03.030745 2017] [core:notice] [pid 3371] AH00094: Command line: 'apache2'
+[Tue Oct 17 06:42:11.671471 2017] [core:info] [pid 3422] [client 10.240.1.30:45830] AH00128: File does not exist: /home/ubuntu/workspace/favicon.ico, referer: https://workspace-putheng.c9users.io/
+[Sat Oct 21 00:40:50.810942 2017] [core:warn] [pid 3341] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Sat Oct 21 00:40:50.816631 2017] [mpm_prefork:notice] [pid 3341] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sat Oct 21 00:40:50.816668 2017] [core:notice] [pid 3341] AH00094: Command line: '/usr/sbin/apache2'
+[Sat Oct 21 00:41:20.395648 2017] [mpm_prefork:notice] [pid 3341] AH00169: caught SIGTERM, shutting down
+[Sat Oct 21 00:41:23.919531 2017] [mpm_prefork:notice] [pid 4861] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Sat Oct 21 00:41:23.919600 2017] [core:notice] [pid 4861] AH00094: Command line: 'apache2'
+[Thu Apr 12 07:46:50.736252 2018] [core:warn] [pid 3027] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Apr 12 07:46:50.740567 2018] [mpm_prefork:notice] [pid 3027] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 12 07:46:50.740601 2018] [core:notice] [pid 3027] AH00094: Command line: 'apache2'
+[Thu Apr 12 07:46:51.931022 2018] [mpm_prefork:notice] [pid 3027] AH00169: caught SIGTERM, shutting down
+[Thu Apr 12 07:47:55.490051 2018] [mpm_prefork:notice] [pid 4181] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 12 07:47:55.490116 2018] [core:notice] [pid 4181] AH00094: Command line: 'apache2'
+[Thu Apr 12 07:49:49.534578 2018] [mpm_prefork:notice] [pid 4181] AH00169: caught SIGTERM, shutting down
+[Thu Apr 12 07:49:50.714426 2018] [mpm_prefork:notice] [pid 4986] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 12 07:49:50.714488 2018] [core:notice] [pid 4986] AH00094: Command line: '/usr/sbin/apache2'
+[Thu Apr 12 09:47:14.093149 2018] [:error] [pid 4993] [client 10.240.0.64:38456] PHP Parse error:  syntax error, unexpected '{', expecting identifier (T_STRING) in /home/ubuntu/workspace/app/Providers/ComposerServiceProvider.php on line 7, referer: http://police-putheng.c9users.io/officer/create
+[Thu Apr 12 09:48:44.351632 2018] [:error] [pid 4991] [client 10.240.0.25:38050] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ubuntu/workspace/storage/framework/views/97af76f1e7d54bb4f4d3edadf20eba5b311d393e.php on line 12, referer: http://police-putheng.c9users.io/home
+[Thu Apr 12 13:56:34.803892 2018] [:error] [pid 4992] [client 10.240.1.65:40760] PHP Fatal error:  Class 'App\\Models\\Offices' not found in /home/ubuntu/workspace/app/Http/Controllers/Officer/OfficerController.php on line 13, referer: http://police-putheng.c9users.io/officer/offices/1
+[Thu Apr 12 13:56:53.848692 2018] [:error] [pid 4993] [client 10.240.1.30:40748] PHP Fatal error:  Class 'App\\Http\\Controllers\\Officer\\Offices' not found in /home/ubuntu/workspace/app/Http/Controllers/Officer/OfficerController.php on line 13, referer: http://police-putheng.c9users.io/officer/offices/1
+[Thu Apr 12 14:26:26.784578 2018] [:error] [pid 4989] [client 10.240.0.25:44958] PHP Parse error:  syntax error, unexpected ''));' (T_ENCAPSED_AND_WHITESPACE) in /home/ubuntu/workspace/app/Http/Controllers/Officer/OfficerController.php on line 26, referer: http://police-putheng.c9users.io/officer/1/office
+[Thu Apr 12 14:41:30.513653 2018] [:error] [pid 4991] [client 10.240.1.191:59828] PHP Parse error:  syntax error, unexpected 'return' (T_RETURN) in /home/ubuntu/workspace/app/Http/Controllers/Officer/OfficerController.php on line 16, referer: http://police-putheng.c9users.io/officer
+[Thu Apr 19 02:42:27.358001 2018] [core:warn] [pid 2945] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Apr 19 02:42:27.365782 2018] [mpm_prefork:notice] [pid 2945] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 19 02:42:27.365835 2018] [core:notice] [pid 2945] AH00094: Command line: 'apache2'
+[Thu Apr 19 02:51:29.386429 2018] [:error] [pid 3045] [client 10.240.1.65:38712] PHP Fatal error:  Class 'Form' not found in /home/ubuntu/workspace/storage/framework/views/ca0c6f6530c66a0ee098409efac0dcabcd2abd74.php on line 36, referer: http://police-putheng.c9users.io/checking/group/1
+[Thu Apr 19 03:03:39.260448 2018] [:error] [pid 2963] [client 10.240.1.65:50466] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/routes/web.php on line 22, referer: http://police-putheng.c9users.io/checking/group/1
+[Thu Apr 19 04:33:50.502438 2018] [:error] [pid 2963] [client 10.240.0.64:37094] PHP Parse error:  syntax error, unexpected '$item' (T_VARIABLE) in /home/ubuntu/workspace/storage/framework/views/ca0c6f6530c66a0ee098409efac0dcabcd2abd74.php on line 39
+[Mon Apr 23 03:42:04.859344 2018] [core:warn] [pid 3465] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Mon Apr 23 03:42:04.865378 2018] [mpm_prefork:notice] [pid 3465] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Mon Apr 23 03:42:04.865431 2018] [core:notice] [pid 3465] AH00094: Command line: 'apache2'
+[Mon Apr 23 03:45:59.318360 2018] [:error] [pid 3476] [client 10.240.0.25:60684] PHP Parse error:  syntax error, unexpected ''checked'' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/storage/framework/views/ca0c6f6530c66a0ee098409efac0dcabcd2abd74.php on line 39, referer: http://police-putheng.c9users.io/checking/group/1
+[Mon Apr 23 04:56:50.991844 2018] [:error] [pid 3477] [client 10.240.1.191:40640] PHP Fatal error:  Access level to App\\Models\\OfficerStatus::$timestamps must be public (as in class Illuminate\\Database\\Eloquent\\Model) in /home/ubuntu/workspace/app/Models/OfficerStatus.php on line 0, referer: http://police-putheng.c9users.io/checking/office/1
+[Mon Apr 23 06:52:45.818019 2018] [:error] [pid 3476] [client 10.240.1.65:40820] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/Checking/CheckController.php on line 32, referer: http://police-putheng.c9users.io/checking/show/office/1
+[Mon Apr 23 07:01:44.423185 2018] [:error] [pid 3474] [client 10.240.0.64:58988] PHP Parse error:  syntax error, unexpected ';' in /home/ubuntu/workspace/app/Http/Controllers/Checking/CheckController.php on line 32, referer: http://police-putheng.c9users.io/checking/show/office/1
+[Mon Apr 23 07:35:15.601134 2018] [:error] [pid 3473] [client 10.240.0.64:57578] PHP Parse error:  syntax error, unexpected ')', expecting '(' in /home/ubuntu/workspace/app/Http/Controllers/Checking/CheckController.php on line 38, referer: http://police-putheng.c9users.io/checking/show/office/1
+[Tue Apr 24 07:56:23.466503 2018] [core:warn] [pid 2743] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Tue Apr 24 07:56:23.473494 2018] [mpm_prefork:notice] [pid 2743] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Tue Apr 24 07:56:23.473575 2018] [core:notice] [pid 2743] AH00094: Command line: 'apache2'
+[Tue Apr 24 08:38:45.466154 2018] [:error] [pid 2803] [client 10.240.0.25:59426] PHP Fatal error:  Call to a member function format() on string in /home/ubuntu/workspace/storage/framework/views/9449f32c185092d7a8e0302cf0601710c18c36dc.php on line 13, referer: http://police-putheng.c9users.io/checking/show/group/1
+[Wed Apr 25 01:36:05.908686 2018] [core:warn] [pid 2332] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Apr 25 01:36:05.917912 2018] [mpm_prefork:notice] [pid 2332] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Wed Apr 25 01:36:05.917991 2018] [core:notice] [pid 2332] AH00094: Command line: 'apache2'
+[Wed Apr 25 02:15:49.336660 2018] [:error] [pid 2432] [client 10.240.0.25:38084] PHP Parse error:  syntax error, unexpected ')' in /home/ubuntu/workspace/storage/framework/views/d91160d0f35381208e3758c464ab6111a308eb66.php on line 27, referer: http://police-putheng.c9users.io/officer/group/2
+[Wed Apr 25 10:07:12.725034 2018] [core:warn] [pid 3555] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Wed Apr 25 10:07:12.732158 2018] [mpm_prefork:notice] [pid 3555] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Wed Apr 25 10:07:12.732251 2018] [core:notice] [pid 3555] AH00094: Command line: 'apache2'
+[Thu Apr 26 03:53:39.021888 2018] [core:warn] [pid 2485] AH00098: pid file /home/ubuntu/lib/apache2/run/apache2.pid overwritten -- Unclean shutdown of previous Apache run?
+[Thu Apr 26 03:53:39.027791 2018] [mpm_prefork:notice] [pid 2485] AH00163: Apache/2.4.7 (Ubuntu) configured -- resuming normal operations
+[Thu Apr 26 03:53:39.027853 2018] [core:notice] [pid 2485] AH00094: Command line: 'apache2'

@@ -17,12 +17,10 @@ class CreateLevelOfficerTable extends Migration
             $table->increments('id');
             $table->integer('officer_id')->unsigned();
             $table->integer('level_id')->unsigned();
-            $table->integer('office_id')->unsigned()->nullable();
             $table->string('note')->default('empty');
             
             $table->timestamps();
             
-            $table->foreign('office_id')->references('id')->on('offices')->onDelete('cascade');
             $table->foreign('officer_id')->references('id')->on('officers')->onDelete('cascade');
             $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
         });

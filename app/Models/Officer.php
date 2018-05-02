@@ -20,14 +20,14 @@ class Officer extends Model
     public function levels()
     {
         return $this->belongsToMany(Level::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();
     }
     
     public function positions()
     {
         return $this->belongsToMany(Position::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();
     }
     

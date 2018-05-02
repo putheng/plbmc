@@ -13,19 +13,24 @@ class Level extends Model
     public function officers()
     {
         return $this->belongsToMany(Officer::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();;
     }
     
     public function offices()
     {
         return $this->belongsToMany(Office::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();;
     }
     
     public function level()
     {
         return $this->belongsTo(OfficerLevel::class);
+    }
+    
+    public function office()
+    {
+        return $this->hasMany                                                         (Office::class);
     }
 }

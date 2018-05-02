@@ -28,7 +28,7 @@ class Office extends Model
     public function levels()
     {
         return $this->belongsToMany(Level::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();;
     }
 

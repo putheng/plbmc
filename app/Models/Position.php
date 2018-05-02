@@ -13,7 +13,7 @@ class Position extends Model
     public function officers()
     {
         return $this->belongsToMany(Officer::class)
-            ->withPivot('note')
+            ->withPivot(['note', 'office_id'])
             ->withTimestamps();;
     }
 

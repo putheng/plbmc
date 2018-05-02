@@ -17,7 +17,7 @@ class CreateOfficerPositionTable extends Migration
             $table->increments('id');
             $table->integer('officer_id')->unsigned();
             $table->integer('position_id')->unsigned();
-            $table->integer('office_id')->unsigned();
+            $table->integer('office_id')->unsigned()->default(0);
             $table->string('note')->default('empty');
             
             $table->timestamps();

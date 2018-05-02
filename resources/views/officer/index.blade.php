@@ -40,7 +40,6 @@
                                             {{ $level->name }}
                                             <br>
                                             <strong>{{ $level->pivot->note }}</strong>
-                                            <strong>{{ $level->offices->first()->name }}</strong>
                                         </li>
                                     @endforeach
                                 </ul>

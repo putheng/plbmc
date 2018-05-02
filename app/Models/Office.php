@@ -24,4 +24,12 @@ class Office extends Model
     {
         return $this->hasMany(OfficerStatus::class);
     }
+    
+    public function levels()
+    {
+        return $this->belongsToMany(Level::class)
+            ->withPivot('note')
+            ->withTimestamps();;
+    }
+
 }

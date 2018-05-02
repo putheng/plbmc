@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Officer;
 
-use App\Models\{Level, Officer, Position};
+use App\Models\{Level, Officer, Position, Office};
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -33,6 +33,7 @@ class EditOfficerController extends Controller
     {
         $this->validate($request, [
             'level' => 'required|exists:levels,id',
+            'office' => 'required|exists:offices,id',
             'note' => 'required'
         ]);
         
@@ -40,7 +41,10 @@ class EditOfficerController extends Controller
         $officer->save();
         
         $level = Level::find($request->level);
+        $office = Office::find($request->office);
+        
         $level->officers()->attach($officer);
+        $level->offices()->attach($office);
         
         $level->officers()->where('note', 'empty')
         ->updateExistingPivot($officer->id, [

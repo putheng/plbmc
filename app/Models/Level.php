@@ -17,6 +17,13 @@ class Level extends Model
             ->withTimestamps();;
     }
     
+    public function offices()
+    {
+        return $this->belongsToMany(Office::class)
+            ->withPivot('note')
+            ->withTimestamps();;
+    }
+    
     public function level()
     {
         return $this->belongsTo(OfficerLevel::class);

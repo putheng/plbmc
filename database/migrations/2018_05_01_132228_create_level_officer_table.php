@@ -17,7 +17,7 @@ class CreateLevelOfficerTable extends Migration
             $table->increments('id');
             $table->integer('officer_id')->unsigned();
             $table->integer('level_id')->unsigned();
-            $table->integer('office_id')->unsigned();
+            $table->integer('office_id')->unsigned()->nullable();
             $table->string('note')->default('empty');
             
             $table->timestamps();

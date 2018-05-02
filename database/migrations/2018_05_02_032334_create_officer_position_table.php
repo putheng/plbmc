@@ -22,7 +22,6 @@ class CreateOfficerPositionTable extends Migration
             
             $table->timestamps();
             
-            $table->foreign('office_id')->references('id')->on('offices')->onDelete('cascade');
             $table->foreign('officer_id')->references('id')->on('officers')->onDelete('cascade');
             $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
         });

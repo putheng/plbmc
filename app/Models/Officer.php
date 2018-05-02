@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Level;
 use Illuminate\Database\Eloquent\Model;
 
 class Officer extends Model
@@ -14,6 +15,13 @@ class Officer extends Model
     public function level()
     {
         return $this->belongsTo(Level::class);
+    }
+    
+    public function levels()
+    {
+        return $this->belongsToMany(Level::class)
+            ->withPivot('note')
+            ->withTimestamps();
     }
     
     public function position()

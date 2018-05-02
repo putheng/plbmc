@@ -9,6 +9,7 @@ return array(
     'ArithmeticError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
     'AssertionError' => $vendorDir . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
     'CreateGroupsTable' => $baseDir . '/database/migrations/2018_04_12_083532_create_groups_table.php',
+    'CreateLevelOfficerTable' => $baseDir . '/database/migrations/2018_05_01_132228_create_level_officer_table.php',
     'CreateLevelsTable' => $baseDir . '/database/migrations/2018_04_12_102405_create_levels_table.php',
     'CreateOfficerStatusTable' => $baseDir . '/database/migrations/2018_04_19_043721_create_officer_status_table.php',
     'CreateOfficersTable' => $baseDir . '/database/migrations/2018_04_12_102829_create_officers_table.php',

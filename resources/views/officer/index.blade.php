@@ -5,7 +5,12 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"> {{ $officer->name }} </div>
+                <div class="panel-heading"> 
+                    {{ $officer->name }} 
+                    <span class="pull-right">
+                        <a href="{{ route('officer.edit', $officer) }}">Edit</a>
+                    </span>
+                </div>
 
                 <div class="panel-body">
                     
@@ -21,6 +26,20 @@
                         <li class="list-group-item">
                             <strong>ឋានន្តរសក្តិ :</strong>
                             {{ $officer->level->name }}
+                            <a class="pull-right" href="{{ route('officer.level', $officer) }}">Edit</a>
+                            
+                            @if($officer->levels->count())
+                                <br><br>
+                                <ul class="list-group">
+                                    @foreach($officer->levels as $level)
+                                        <li class="list-group-item">
+                                            {{ $level->name }}
+                                            <br>
+                                            <strong>{{ $level->pivot->note }}</strong>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <strong>ឋានៈ :</strong>

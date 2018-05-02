@@ -13,15 +13,7 @@ class CreateLevelOfficeTable extends Migration
      */
     public function up()
     {
-        Schema::create('level_office', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('office_id')->unsigned();
-            $table->integer('level_id')->unsigned();
-            $table->timestamps();
-            
-            $table->foreign('office_id')->references('id')->on('offices')->onDelete('cascade');
-            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
-        });
+        
     }
 
     /**
@@ -31,6 +23,6 @@ class CreateLevelOfficeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('level_office');
+        
     }
 }

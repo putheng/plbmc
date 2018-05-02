@@ -68,7 +68,7 @@ class OfficerController extends Controller
     
     public function office(Office $office)
     {
-        $officers = $office->officers()->orderBy('id', 'asc')->get();
+        $officers = $office->officers()->orderBy('position_id', 'asc')->get();
         return view('officer.show', compact('officers', 'office'));
     }
 }

@@ -54,9 +54,12 @@ Route::group(['middleware' => 'auth', 'prefix' => 'officer', 'namespace' => 'Off
     Route::get('/officer/{officer}/edit', 'OfficerController@edit')->name('edit');
     Route::post('/officer/{officer}/edit', 'OfficerController@store');
     
-    
     Route::get('/officer/{officer}/level', 'OfficerController@level')->name('level');
     Route::post('/officer/{officer}/level', 'EditOfficerController@level');
+    
+    Route::get('/officer/{officer}/position', 'OfficerController@position')->name('position');
+    Route::post('/officer/{officer}/position', 'EditOfficerController@position');
+    
     
     Route::get('/office/{office}', 'OfficerController@office')->name('office');
     

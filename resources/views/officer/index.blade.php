@@ -44,6 +44,19 @@
                         <li class="list-group-item">
                             <strong>ឋានៈ :</strong>
                             {{ $officer->position->name }}
+                            <a class="pull-right" href="{{ route('officer.position', $officer) }}">Edit</a>
+                            @if($officer->position->count())
+                                <br><br>
+                                <ul class="list-group">
+                                    @foreach($officer->positions as $position)
+                                        <li class="list-group-item">
+                                            {{ $position->name }}
+                                            <br>
+                                            <strong>{{ $position->pivot->note }}</strong>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <strong>លេខទូរសព្ទ : :</strong>
@@ -51,6 +64,9 @@
                         </li>
                     </ul>
                     
+                </div>
+                <div class="panel-footer">
+                    <h5><a href="{{ route('officer.office', $officer->office) }}">Back</a></h5>
                 </div>
             </div>
         </div>

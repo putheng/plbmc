@@ -24,6 +24,13 @@ class Officer extends Model
             ->withTimestamps();
     }
     
+    public function positions()
+    {
+        return $this->belongsToMany(Position::class)
+            ->withPivot('note')
+            ->withTimestamps();
+    }
+    
     public function position()
     {
         return $this->belongsTo(Position::class);

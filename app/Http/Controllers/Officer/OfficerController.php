@@ -20,6 +20,11 @@ class OfficerController extends Controller
         return view('officer.level', compact('officer'));
     }
     
+    public function position(Officer $officer)
+    {
+        return view('officer.position', compact('officer'));
+    }
+    
     public function store(Request $request, Officer $officer)
     {
         $this->validate($request, [

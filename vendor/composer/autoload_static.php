@@ -269,6 +269,7 @@ class ComposerStaticInitfc59f85916cff1d8a55f7bf4f7224582
         'ArithmeticError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/ArithmeticError.php',
         'AssertionError' => __DIR__ . '/..' . '/symfony/polyfill-php70/Resources/stubs/AssertionError.php',
         'CreateGroupsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_083532_create_groups_table.php',
+        'CreateLevelOfficeTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_02_075643_create_level_office_table.php',
         'CreateLevelOfficerTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_01_132228_create_level_officer_table.php',
         'CreateLevelsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_102405_create_levels_table.php',
         'CreateOfficerPositionTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_02_032334_create_officer_position_table.php',

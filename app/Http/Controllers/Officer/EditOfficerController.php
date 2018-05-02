@@ -49,10 +49,8 @@ class EditOfficerController extends Controller
         $level->officers()->where('note', 'empty')
         ->updateExistingPivot($officer->id, [
             'note' => $request->note,
-            'office_id' => $request->office,
         ]);
         
-        $level->offices()->attach($officer);
         
         return back()->withSuccess('Update successfuly!');
     }

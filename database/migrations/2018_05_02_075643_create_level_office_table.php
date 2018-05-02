@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOfficerPositionTable extends Migration
+class CreateLevelOfficeTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,14 @@ class CreateOfficerPositionTable extends Migration
      */
     public function up()
     {
-        Schema::create('officer_position', function (Blueprint $table) {
+        Schema::create('level_office', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('officer_id')->unsigned();
-            $table->integer('position_id')->unsigned();
             $table->integer('office_id')->unsigned();
-            $table->string('note')->default('empty');
-            
+            $table->integer('level_id')->unsigned();
             $table->timestamps();
             
             $table->foreign('office_id')->references('id')->on('offices')->onDelete('cascade');
-            $table->foreign('officer_id')->references('id')->on('officers')->onDelete('cascade');
-            $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');
+            $table->foreign('level_id')->references('id')->on('levels')->onDelete('cascade');
         });
     }
 
@@ -35,6 +31,6 @@ class CreateOfficerPositionTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('officer_position');
+        Schema::dropIfExists('level_office');
     }
 }

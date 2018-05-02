@@ -21,7 +21,11 @@
                         </li>
                         <li class="list-group-item">
                             <strong>ភេទ :</strong>
-                            {{ $officer->gender }}
+                            @if($officer->gender == 'male')
+                                ប្រុស
+                            @else
+                                ស្រី
+                            @endif
                         </li>
                         <li class="list-group-item">
                             <strong>ឋានន្តរសក្តិ :</strong>
@@ -36,6 +40,7 @@
                                             {{ $level->name }}
                                             <br>
                                             <strong>{{ $level->pivot->note }}</strong>
+                                            <strong>{{ $level->offices->first()->name }}</strong>
                                         </li>
                                     @endforeach
                                 </ul>

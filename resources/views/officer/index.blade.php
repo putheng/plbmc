@@ -38,8 +38,8 @@
                                     @foreach($officer->levels as $level)
                                         <li class="list-group-item">
                                             {{ $level->name }}
-                                            <br>
-                                            <strong>{{ $level->pivot->note }}</strong>
+                                            <div>{{ $level->pivot->note }}</div>
+                                            <div>{{ $level->office()->name }}</div>
                                         </li>
                                     @endforeach
                                 </ul>

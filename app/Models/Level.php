@@ -23,9 +23,9 @@ class Level extends Model
             ->withTimestamps();;
     }
     
-    public function level()
+    public function office()
     {
-        return $this->belongsTo(OfficerLevel::class);
+        return Office::find($this->pivot->office_id);
     }
     
 }

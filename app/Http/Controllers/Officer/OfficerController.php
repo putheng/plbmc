@@ -69,11 +69,18 @@ class OfficerController extends Controller
     public function office(Office $office)
     {
         $officers = $office->officers()
+            ->with([
+                'level' => function($q){
+                    $q->orderBy('id', 'asc');
+                }
+                ,'position' => function($q){
+                    $q->orderBy('id', 'asc');
+                }
+            ])
             ->orderBy('position_id', 'asc')
             ->orderBy('level_id', 'desc')
             ->orderBy('identity', 'asc')
             ->get();
-        
         
         return view('officer.show', compact('officers', 'office'));
     }

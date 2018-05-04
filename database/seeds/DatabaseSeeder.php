@@ -12,7 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(LevelTableSeeder::class);
-        $this->call(PositionTableSeeder::class);
         $this->call(StatusTableSeeder::class);
     }
 }

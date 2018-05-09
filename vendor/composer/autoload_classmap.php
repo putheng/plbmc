@@ -16,6 +16,7 @@ return array(
     'CreateOfficerStatusTable' => $baseDir . '/database/migrations/2018_04_19_043721_create_officer_status_table.php',
     'CreateOfficersTable' => $baseDir . '/database/migrations/2018_04_12_102829_create_officers_table.php',
     'CreateOfficesTable' => $baseDir . '/database/migrations/2018_04_12_090542_create_offices_table.php',
+    'CreatePartsTable' => $baseDir . '/database/migrations/2018_05_09_085852_create_parts_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreatePositionsTable' => $baseDir . '/database/migrations/2018_04_12_102427_create_positions_table.php',
     'CreateStatusesTable' => $baseDir . '/database/migrations/2018_04_19_040306_create_statuses_table.php',

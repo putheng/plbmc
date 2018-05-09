@@ -1,11 +1,10 @@
 <?php
 
-use Kalnoy\Nestedset\NestedSet;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOfficesTable extends Migration
+class CreatePartsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,10 +13,11 @@ class CreateOfficesTable extends Migration
      */
     public function up()
     {
-        Schema::create('offices', function (Blueprint $table) {
+        Schema::create('parts', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('group_id')->nullable();
+            $table->integer('office_id')->nullable();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +28,6 @@ class CreateOfficesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('offices');
+        Schema::dropIfExists('parts');
     }
 }

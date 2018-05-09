@@ -20,7 +20,9 @@ class CreateOfficersTable extends Migration
             $table->string('gender');
             $table->integer('level_id')->unsigned()->index();
             $table->integer('position_id')->unsigned()->index();
-            $table->string('phone');
+            $table->string('phone')->nullable();
+             $table->string('birthday')->nullable();
+             $table->string('start_word')->nullable();
             
             $table->integer('office_id')->unsigned()->index();
             $table->timestamps();

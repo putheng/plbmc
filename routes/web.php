@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/test', function(){
+    
+});
 
 Route::group(['middleware' => 'auth', 'prefix' => 'checking', 'namespace' => 'Checking', 'as' => 'checking.'], function(){
     Route::get('/', 'CheckController@index')->name('index');
@@ -33,6 +36,13 @@ Route::group(['middleware' => 'auth', 'prefix' => 'offices', 'namespace' => 'Off
     
     Route::get('/create', 'CreateOfficeController@show')->name('create');
     Route::post('/create', 'CreateOfficeController@store');
+    
+});
+
+Route::group(['middleware' => 'auth', 'prefix' => 'part', 'namespace' => 'Part', 'as' => 'part.'], function(){
+    
+    Route::get('/create', 'PartController@show')->name('create');
+    Route::post('/create', 'PartController@store');
     
 });
 
@@ -68,6 +78,13 @@ Route::group(['middleware' => 'auth', 'prefix' => 'officer', 'namespace' => 'Off
     
     Route::get('/offices', 'CreateOfficerController@offices')->name('offices');
     
+    Route::group(['prefix' => 'admin'], function(){
+        
+        Route::get('/show', 'InsertOfficersController@show')->name('officer.show');
+        
+        Route::get('/insert', 'InsertOfficersController@index')->name('insert.insert');
+        Route::post('/insert', 'InsertOfficersController@store');
+    });
 });
 
 Route::get('/', function () {

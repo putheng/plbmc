@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
+use Kalnoy\Nestedset\NodeTrait;
 use Illuminate\Database\Eloquent\Model;
 
 class Office extends Model
 {
-    protected $fillable = ['name'];
+    protected $fillable = ['name', 'parent_id'];
     
     public $timestamps = false;
     
@@ -30,6 +31,11 @@ class Office extends Model
         return $this->belongsToMany(Level::class)
             ->withPivot('note')
             ->withTimestamps();;
+    }
+    
+    public function parts()
+    {
+        return $this->hasMany(Part::class);
     }
 
 }

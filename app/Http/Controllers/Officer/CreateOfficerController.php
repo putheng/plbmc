@@ -46,4 +46,5 @@ class CreateOfficerController extends Controller
         
         return back()->withSuccess('Created successfuly');
     }
+    
 }

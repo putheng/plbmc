@@ -11,7 +11,8 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -79,6 +80,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ route('officer.officer.show') }}">នគរបាល</a></li>
+                                    <li><a href="{{ route('officer.insert.insert') }}">បន្ថែម នគរបាល</a></li>
+                                    <li><a href="{{ route('part.create') }}">បន្ថែម  ផ្នែគ</a></li>
                                     <li><a href="{{ route('office.create') }}">បន្ថែម ការិយាល័យ</a></li>
                                     <li><a href="{{ route('group.create') }}">បន្ថែម ផែន</a></li>
                                     <li>

@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-use App\Models\Level;
+use App\Models\Position;
 
 class PositionTableSeeder extends Seeder
 {
@@ -13,23 +13,20 @@ class PositionTableSeeder extends Seeder
      */
     public function run()
     {
-        $values = [
-            ['name' => 'ពលបាលត្រី'],
-            ['name' => 'ពលបាលទោ'],
-            ['name' => 'ពលបាលឯក'],
-            ['name' => 'ព្រិន្ទបាលទោ'],
-            ['name' => 'ព្រិន្ទបាលឯក'],
-            ['name' => 'អនុសេនីយ៍ត្រី'],
-            ['name' => 'អនុសេនីយ៍ទោ'],
-            ['name' => 'អនុសេនីយ៍ឯក'],
-            ['name' => 'វរសេនីយ៍ត្រី'],
-            ['name' => 'វរសេនីយ៍ទោ'],
-            ['name' => 'វរសេនីយ៍ឯក'],
-            ['name' => 'ឧត្តមសេនីយ៍ត្រី'],
-            ['name' => 'ឧត្តមសេនីយ៍ទោ'],
-            ['name' => 'ឧត្តមសេនីយ៍ឯក'],
+        $data = [
+            ['name' => 'ស្នងកា'],
+            ['name' => 'ស្នងការរង'],
+            ['name' => 'នាយការិយាល័យ'],
+            ['name' => 'នាយរងការិយាល័យ'],
+            ['name' => 'នាយផ្នែក ការិយាល័យ'],
+            ['name' => 'នាយផ្នែក អធិកា'],
+            ['name' => 'នាយផ្នែក វរៈ'],
+            ['name' => 'នាយរងផ្នែក ការិយាល័យ'],
+            ['name' => 'នាយរងផ្នែក អធិកា'],
+            ['name' => 'នាយរងផ្នែក វរៈ'],
+            ['name' => 'មន្រ្តី'],
         ];
         
-        Level::insert($values);
+        Position::insert($data); 
     }
 }

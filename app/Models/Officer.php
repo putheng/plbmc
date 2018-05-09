@@ -7,6 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Officer extends Model
 {
+    protected $fillable = [
+                    'name' ,
+                    'indentify',
+                    'gender',
+                    'level_id',
+                    'position_id',
+                    'phone',
+                    'birthday',
+                    'start_word',
+                    'office_id'   
+                ];
+    
     public function office()
     {
         return $this->belongsTo(Office::class);

@@ -69,6 +69,10 @@ class ComposerStaticInitfc59f85916cff1d8a55f7bf4f7224582
         array (
             'League\\Flysystem\\' => 17,
         ),
+        'K' => 
+        array (
+            'Kalnoy\\Nestedset\\' => 17,
+        ),
         'I' => 
         array (
             'Illuminate\\' => 11,
@@ -202,6 +206,10 @@ class ComposerStaticInitfc59f85916cff1d8a55f7bf4f7224582
         array (
             0 => __DIR__ . '/..' . '/league/flysystem/src',
         ),
+        'Kalnoy\\Nestedset\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/kalnoy/nestedset/src',
+        ),
         'Illuminate\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
@@ -291,6 +299,7 @@ class ComposerStaticInitfc59f85916cff1d8a55f7bf4f7224582
         'CreateOfficerStatusTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_19_043721_create_officer_status_table.php',
         'CreateOfficersTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_102829_create_officers_table.php',
         'CreateOfficesTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_090542_create_offices_table.php',
+        'CreatePartsTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_09_085852_create_parts_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
         'CreatePositionsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_102427_create_positions_table.php',
         'CreateStatusesTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_19_040306_create_statuses_table.php',

@@ -25,6 +25,7 @@ class CreateOfficersTable extends Migration
              $table->string('start_word')->nullable();
             
             $table->integer('office_id')->unsigned()->index();
+            $table->integer('part_id')->nullable();
             $table->timestamps();
             
             $table->foreign('position_id')->references('id')->on('positions')->onDelete('cascade');

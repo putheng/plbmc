@@ -15,17 +15,26 @@
                         <div class="panel-body">
                             
                             <div class="form-group">
-                                <label class="control-label">Group</label>
-                                <select name="group" class="form-control">
-                                    @foreach(\App\Models\Office::get() as $office)
+                                <label class="control-label">Office</label>
+                                <select name="office" class="form-control">
+                                    @foreach($offices as $office)
                                         <option value="{{ $office->id }}">{{ $office->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
                             
                             <div class="form-group">
-                                <label class="control-label">Office</label>
-                                <input type="text" name="office" class="form-control">
+                                <label class="control-label">Part</label>
+                                <select name="part" class="form-control">
+                                    @foreach($offices as $office)
+                                    <optgroup label="{{ $office->name }}"> 
+                                        <option value="{{ $office->id }}">{{ $office->name }}</option>
+                                        @foreach($office->parts as $part)
+                                            <option value="{{ $part->id }}">{{ $part->name }}</option>
+                                        @endforeach
+                                     </optgroup>
+                                    @endforeach
+                                </select>
                             </div>
                             
                             <div class="form-group">

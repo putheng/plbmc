@@ -33,3 +33,7 @@ a.list-group-item, button.list-group-item,
 .navbar-default .navbar-nav > li > a {
     font-family:'Khmer OS Siemreap';
 }
+
+.form-control{
+	font-family: 'Khmer OS Siemreap';
+}

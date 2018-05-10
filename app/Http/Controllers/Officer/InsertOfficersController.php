@@ -13,6 +13,48 @@ class InsertOfficersController extends Controller
         return view('offices.insert');
     }
     
+    public function actions(Request $request)
+    {
+        $string = $request->text;
+        $part = $request->part;
+        $office = $request->office;
+        
+        $data = [];
+        
+        foreach(explode(PHP_EOL, $string) as $list){
+            
+            $explode = explode("\t", trim($list));
+            
+            
+            $level = Level::firstOrCreate(['name' => trim($explode[9])]);
+            
+            $officer = new Officer;
+            
+            $officer->name = trim($explode[0]);
+            $officer->identity = trim($explode[2]);
+            $officer->gender = trim($explode[1]);
+            $officer->level_id = $level->id;
+            $officer->position_id = Position::firstOrCreate(['name' => trim($explode[5])])->id;
+            $officer->birthday = trim($explode[3]);
+            $officer->start_word = trim($explode[4]);
+            $officer->office_id = trim($office);
+            $officer->part_id = trim($part);
+            
+            $officer->save();
+            
+            $level->officers()->attach($officer);
+            
+            $level->officers()->where('note', 'empty')
+            ->updateExistingPivot($officer->id, [
+                'note' => trim($explode[10]) .'-'. trim($explode[11]),
+                'office_id' => $office,
+            ]);
+            
+        }
+        
+        return back()->withSuccess('Create successfuly!');
+    }
+    
     public function store(Request $request)
     {
         $string = $request->text;

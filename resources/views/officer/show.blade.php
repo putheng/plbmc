@@ -27,7 +27,7 @@
                                     <td>{{ ($key + 1) }}
                                         <a href="{{ route('officer.show', [$officer]) }}">{{ $officer->name }}</a></td>
                                     <td>{{ $officer->identity }}</td>
-                                    <th>{{ $officer->gender == 'male' ? 'ប្រុស' : 'ស្រី' }}</th>
+                                    <th>{{ $officer->gender }}</th>
                                     <td>{{ $officer->level->name }}</td>
                                     <td>{{ $officer->position->name }}</td>
                                     <td>{{ $officer->phone }}</td>

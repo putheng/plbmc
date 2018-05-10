@@ -4,9 +4,12 @@ namespace App\Providers;
 
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use App\Http\ViewComposers\GroupComposer;
-use App\Http\ViewComposers\OfficeComposer;
-use App\Http\ViewComposers\OptionComposer;
+use App\Http\ViewComposers\{
+    GroupComposer,
+    OfficeComposer,
+    OptionComposer,
+    OfficePartComposer
+};
 
 class ComposerServiceProvider extends ServiceProvider
 {
@@ -22,6 +25,8 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer('officer.offices', OfficeComposer::class);
         
         View::composer('officer.create', OptionComposer::class);
+        
+        View::composer('offices.insert', OfficePartComposer::class);
     }
 
     /**

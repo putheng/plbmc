@@ -83,7 +83,7 @@ Route::group(['middleware' => 'auth', 'prefix' => 'officer', 'namespace' => 'Off
         Route::get('/show', 'InsertOfficersController@show')->name('officer.show');
         
         Route::get('/insert', 'InsertOfficersController@index')->name('insert.insert');
-        Route::post('/insert', 'InsertOfficersController@store');
+        Route::post('/insert', 'InsertOfficersController@actions');
     });
 });
 

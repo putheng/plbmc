@@ -60,13 +60,4 @@
         </div>
     </div>
 </div>
-<style>
-.radio-toolbar input[type="radio"] {display:none;}
-.radio-toolbar label {
-    font-weight: 100;
-}
-.radio-toolbar input[type="radio"]:checked+label { 
-    background:red !important;
-}
-</style>
 @endsection

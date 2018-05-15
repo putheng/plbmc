@@ -20,13 +20,15 @@ class PartController extends Controller
             'group' => 'required|exists:offices,id'
         ]);
         
+        $req = $request->name;
+        
         $part = new Part;
         
-        $part->name = $request->name;
+        $part->name = $req;
         $part->office_id = $request->group;
         
         $part->save();
         
-        return back()->withSuccess('Created');
+        return back()->withSuccess($req);
     }
 }

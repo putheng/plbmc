@@ -24,16 +24,23 @@
 
 }
 
-.panel-default > .panel-heading {
+.panel-default .panel-heading {
     font-family:'Khmer OS Muol Light';
 }
 
 a.list-group-item, button.list-group-item,
 .dropdown-menu > li > a,
+table.table.table-bordered.table-striped,
+.panel-body,
+.form-control,
 .navbar-default .navbar-nav > li > a {
     font-family:'Khmer OS Siemreap';
 }
 
-.form-control{
-	font-family: 'Khmer OS Siemreap';
+.radio-toolbar input[type="radio"] {display:none;}
+.radio-toolbar label {
+    font-weight: 100;
+}
+.radio-toolbar input[type="radio"]:checked+label { 
+    background:red !important;
 }

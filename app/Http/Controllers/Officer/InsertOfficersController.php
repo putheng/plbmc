@@ -27,6 +27,7 @@ class InsertOfficersController extends Controller
             
             
             $level = Level::firstOrCreate(['name' => trim($explode[9])]);
+            $position = Position::firstOrCreate(['name' => trim($explode[5])]);
             
             $officer = new Officer;
             
@@ -34,7 +35,7 @@ class InsertOfficersController extends Controller
             $officer->identity = trim($explode[2]);
             $officer->gender = trim($explode[1]);
             $officer->level_id = $level->id;
-            $officer->position_id = Position::firstOrCreate(['name' => trim($explode[5])])->id;
+            $officer->position_id = $position->id;
             $officer->birthday = trim($explode[3]);
             $officer->start_word = trim($explode[4]);
             $officer->office_id = trim($office);
@@ -43,13 +44,17 @@ class InsertOfficersController extends Controller
             $officer->save();
             
             $level->officers()->attach($officer);
-            
             $level->officers()->where('note', 'empty')
             ->updateExistingPivot($officer->id, [
-                'note' => trim($explode[10]) .'-'. trim($explode[11]),
+                'note' => json_encode(['number' => trim($explode[10]), 'dates' => trim($explode[11])]),
                 'office_id' => $office,
             ]);
             
+            $position->officers()->attach($officer);
+            $position->officers()->where('note', 'empty')
+            ->updateExistingPivot($officer->id, [
+                'note' => json_encode(['number' => trim($explode[6]), 'dates' => trim($explode[7])]),
+            ]);
         }
         
         return back()->withSuccess('Create successfuly!');

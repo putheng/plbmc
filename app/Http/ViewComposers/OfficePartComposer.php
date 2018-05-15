@@ -9,7 +9,7 @@ class OfficePartComposer
 {
     public function compose(View $view)
     {
-        $offices = Office::with('parts')->get();
+        $offices = Office::with('parts')->orderBy('id', 'desc')->get();
         
         $view->with(compact('offices'));
     }

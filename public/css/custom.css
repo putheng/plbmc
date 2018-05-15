@@ -24,6 +24,7 @@
 
 }
 
+.font-muol,
 .panel-default .panel-heading {
     font-family:'Khmer OS Muol Light';
 }
@@ -33,6 +34,7 @@ a.list-group-item, button.list-group-item,
 table.table.table-bordered.table-striped,
 .panel-body,
 .form-control,
+.font-sr,
 .navbar-default .navbar-nav > li > a {
     font-family:'Khmer OS Siemreap';
 }
@@ -43,4 +45,19 @@ table.table.table-bordered.table-striped,
 }
 .radio-toolbar input[type="radio"]:checked+label { 
     background:red !important;
+}
+
+table.td-middle tr td{
+	vertical-align: middle !important;
+}
+
+.text-bold{
+	font-weight: bold;
+}
+.text-underline{
+	text-decoration: underline;
+}
+
+img.tacteng-img{
+	width:90px;
 }

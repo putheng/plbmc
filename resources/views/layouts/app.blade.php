@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/custom.css?v=34567') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css?v=123') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
@@ -80,6 +80,7 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                    <li><a href="{{ route('officer.data.index') }}">ទិន្នន័យជាក់ស្តែង</a></li>
                                     <li><a href="{{ route('officer.officer.show') }}">នគរបាល</a></li>
                                     <li><a href="{{ route('officer.insert.insert') }}">បន្ថែម នគរបាល</a></li>
                                     <li><a href="{{ route('part.create') }}">បន្ថែម  ផ្នែគ</a></li>

@@ -8,6 +8,11 @@ use App\Http\Controllers\Controller;
 
 class PartController extends Controller
 {
+    public function index(Part $part)
+    {
+        return view('parts.index', compact('part'));
+    }
+    
     public function show()
     {
         return view('parts.create');

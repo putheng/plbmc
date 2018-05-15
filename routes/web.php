@@ -44,6 +44,8 @@ Route::group(['middleware' => 'auth', 'prefix' => 'part', 'namespace' => 'Part',
     Route::get('/create', 'PartController@show')->name('create');
     Route::post('/create', 'PartController@store');
     
+    Route::get('/{part}', 'PartController@index')->name('index');
+    
 });
 
 Route::group(['middleware' => 'auth', 'prefix' => 'group', 'namespace' => 'Group', 'as' => 'group.'], function(){
@@ -56,6 +58,11 @@ Route::group(['middleware' => 'auth', 'prefix' => 'group', 'namespace' => 'Group
 Route::group(['middleware' => 'auth', 'prefix' => 'officer', 'namespace' => 'Officer', 'as' => 'officer.'], function(){
     
     Route::get('/', 'OfficerController@group')->name('index');
+    
+    Route::group(['prefix' => 'data', 'as' => 'data.'], function(){
+       Route::get('/', 'DataController@index')->name('index');
+       Route::get('/print', 'DataController@prints')->name('print');
+    });
     
     Route::get('/group/{group}', 'OfficerController@index')->name('group');
     

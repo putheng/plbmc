@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-
 <div class="container">
     <div class="row">
         <div class="col-xs-4 col-xs-4 text-center">
@@ -34,7 +33,7 @@
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="table-responsive">
-                <table class="table table-bordered td-middle font-sr text-center">
+                <table class="table print table-bordered td-middle font-sr text-center">
                     <tbody>
                         <tr>
                             <td rowspan="2">ល.រ</td>
@@ -44,8 +43,7 @@
                             
                             <td colspan="2">ថ្នាក់ការិយាល័យ</td>
                             <td colspan="3">ថ្នាក់ផ្នែក</td>
-                            <td rowspan="2">ផ្សេងៗ</td>
-                            <td colspan="2">គ្រោង</td>
+                            <td rowspan="2">ផ្សេងៗ</td
                         </tr>
                         <tr>
                             <td>ចំនួនរួម</td>
@@ -58,16 +56,12 @@
                             <td>នាយ</td>
                             <td>រង</td>
                             <td>មន្រ្តី</td>
-                            <td>បន្ថែម</td>
-                            <td>បន្ថយ</td>
                         </tr>
                         
                         @foreach($groups as $group)
                             <tr>
                                 <td></td>
                                 <td class="font-muol">{{ $group->name }}</td>
-                                <td></td>
-                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -95,8 +89,6 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
                                 </tr>
                                 @foreach($office->parts as $part)
                                     <tr>
@@ -112,8 +104,6 @@
                                         <td>{{ $part->position(6) }}</td>
                                         <td>{{ $part->position(8) }}</td>
                                         <td>{{ $part->position(10) }}</td>
-                                        <td></td>
-                                        <td></td>
                                         <td></td>
                                     </tr>
                                 @endforeach

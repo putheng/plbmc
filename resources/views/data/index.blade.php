@@ -81,7 +81,7 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            @foreach($group->offices as $office)
+                            @foreach($group->offices()->with(['parts'])->get() as $office)
                                 <tr>
                                     <td></td>
                                     <td class="font-muol"><a target="_blank" href="{{ route('officer.office', $office) }}">{{ $office->name }}</a></td>

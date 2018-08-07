@@ -295,6 +295,7 @@ class ComposerStaticInitfc59f85916cff1d8a55f7bf4f7224582
         'CreateLevelOfficeTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_02_075643_create_level_office_table.php',
         'CreateLevelOfficerTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_01_132228_create_level_officer_table.php',
         'CreateLevelsTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_102405_create_levels_table.php',
+        'CreateOfficeStatusesTable' => __DIR__ . '/../..' . '/database/migrations/2018_07_03_030435_create_office_statuses_table.php',
         'CreateOfficerPositionTable' => __DIR__ . '/../..' . '/database/migrations/2018_05_02_032334_create_officer_position_table.php',
         'CreateOfficerStatusTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_19_043721_create_officer_status_table.php',
         'CreateOfficersTable' => __DIR__ . '/../..' . '/database/migrations/2018_04_12_102829_create_officers_table.php',

@@ -12,4 +12,9 @@ class Group extends Model
     {
         return $this->hasMany(Office::class);
     }
+    
+    public function parts()
+    {
+        return $this->hasManyThrough(Part::class, Office::class);
+    }
 }

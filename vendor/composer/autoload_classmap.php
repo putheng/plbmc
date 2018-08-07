@@ -12,6 +12,7 @@ return array(
     'CreateLevelOfficeTable' => $baseDir . '/database/migrations/2018_05_02_075643_create_level_office_table.php',
     'CreateLevelOfficerTable' => $baseDir . '/database/migrations/2018_05_01_132228_create_level_officer_table.php',
     'CreateLevelsTable' => $baseDir . '/database/migrations/2018_04_12_102405_create_levels_table.php',
+    'CreateOfficeStatusesTable' => $baseDir . '/database/migrations/2018_07_03_030435_create_office_statuses_table.php',
     'CreateOfficerPositionTable' => $baseDir . '/database/migrations/2018_05_02_032334_create_officer_position_table.php',
     'CreateOfficerStatusTable' => $baseDir . '/database/migrations/2018_04_19_043721_create_officer_status_table.php',
     'CreateOfficersTable' => $baseDir . '/database/migrations/2018_04_12_102829_create_officers_table.php',

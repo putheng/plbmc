@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('/css/custom.css?v=123') }}" rel="stylesheet">
+    <link href="{{ asset('/css/custom.css?v=12') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>

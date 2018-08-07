@@ -27,6 +27,11 @@
 .font-muol,
 .panel-default .panel-heading {
     font-family:'Khmer OS Muol Light';
+    color: black;
+}
+table.print tr,
+table.print td{
+	border:1px solid black !important;
 }
 
 a.list-group-item, button.list-group-item,
@@ -37,6 +42,7 @@ table.table.table-bordered.table-striped,
 .font-sr,
 .navbar-default .navbar-nav > li > a {
     font-family:'Khmer OS Siemreap';
+    color: black;
 }
 
 .radio-toolbar input[type="radio"] {display:none;}
@@ -60,4 +66,8 @@ table.td-middle tr td{
 
 img.tacteng-img{
 	width:90px;
+}
+
+div.print{
+	color: black;
 }

@@ -110,9 +110,9 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>{{ $part->position(6) }}</td>
+                                        <td>{{ $part->position(5) }}</td>
                                         <td>{{ $part->position(8) }}</td>
-                                        <td>{{ $part->position(10) }}</td>
+                                        <td>{{ $part->position(11) }}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

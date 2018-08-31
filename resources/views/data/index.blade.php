@@ -90,8 +90,8 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $office->officers()->getPosition(3) }}</td>
+                                    <td>{{ $office->officers()->getPosition(4) }}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -108,22 +108,87 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>{{ $part->position(3) }}</td>
-                                        <td>{{ $part->position(4) }}</td>
-                                        <td>{{ $part->position(5) }}</td>
-                                        <td>{{ $part->position(8) }}</td>
-                                        <td>{{ $part->position(11) }}</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>{{ $part->position(12) }}</td>
+                                        <td>{{ $part->position(13) }}</td>
+                                        <td>{{ $part->position(14) }}</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
                                 @endforeach
+
+                                <tr>
+                                    <td></td>
+                                    <td​​​​></td​​​​>
+                                    <td class="font-muol">សរុប​</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
                             @endforeach
                         @endforeach
                         
                     </tbody>
                 </table>
             </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 text-center font-sr">
+            <br><br>
+            <p>ថ្ង.........ខែ......... ឆ្នាំ..... សំរឹទ្ធិស័កព.ស២៥៦២</p>
+            <p>បន្ទាយមានជ័យ,ថ្ងៃទី.................ខែ...............ឆ្នាំ២០១៨</p>
+            <p class="font-muol h5">នាយការិយាល័យបុគ្គលិក</p>
+        </div>
+        <div class="col-md-4 col-md-offset-4 font-sr text-center">
+            <br>
+            <p>ថ្ង.........ខែ......... ឆ្នាំ..... សំរឹទ្ធិស័កព.ស២៥៦២</p>
+            <p>បន្ទាយមានជ័យ,ថ្ងៃទី.................ខែ...............ឆ្នាំ២០១៨</p>
+            <p class="font-muol h5">អ្នកធ្វើតារាង</p>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-md-4 text-center font-sr">
+            <br><br><br><br>
+            <p>បានឃើញ និង ឯកភាព</p>
+            <p>ថ្ង.........ខែ......... ឆ្នាំ..... សំរឹទ្ធិស័កព.ស២៥៦២</p>
+            <p>បន្ទាយមានជ័យ,ថ្ងៃទី.................ខែ...............ឆ្នាំ២០១៨</p>
+            <p class="font-muol h5">ស្នងការនគរបាលខេត្ត</p>
+        </div>
+        <div class="col-md-4 col-md-offset-4 font-sr text-center">
+            <br><br><br>
+            <p>បានពិនិត្យត្រឹមត្រូ</p>
+            <p>ថ្ង.........ខែ......... ឆ្នាំ..... សំរឹទ្ធិស័កព.ស២៥៦២</p>
+            <p>បន្ទាយមានជ័យ,ថ្ងៃទី.................ខែ...............ឆ្នាំ២០១៨</p>
+            <p class="font-muol h5 text-center height25">
+                ស្នងការរង<br>
+                ផែនការងារគ្រប់គ្រងធនធានមនុស្ស
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <br><br><br>
+
+            {{ $groups->links() }}
         </div>
     </div>
 </div>

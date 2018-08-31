@@ -32,7 +32,7 @@ class CheckController extends Controller
         
         $query = $office->status()->select('officer_status.dates')->groupBy('dates')->get();
         
-        $officers = $office->officers()->orderBy('level_id', 'desc')->get();
+        $officers = $office->officers()->orderBy('id', 'asc')->get();
         
         //dd($query);
         return view('check.officeShow', compact('query', 'office', 'officers'));

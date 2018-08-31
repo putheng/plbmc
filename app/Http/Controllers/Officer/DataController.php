@@ -10,7 +10,7 @@ class DataController extends Controller
 {
     public function index()
     {
-        $groups = Group::with(['offices'])->get();
+        $groups = Group::with(['offices'])->paginate(1);
         return view('data.index', compact(['groups']));
     }
     

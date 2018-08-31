@@ -34,7 +34,10 @@
                                     @foreach($officer->levels as $level)
                                         <li class="list-group-item">
                                             {{ $level->name }}
-                                            <div>{{ $level->pivot->note }}</div>
+                                            <div>
+                                                លេខ {{ json_decode($level->pivot->note)->number }}
+                                                ចុះថ្ងៃទី {{ json_decode($level->pivot->note)->dates }}
+                                            </div>
                                             <div>{{ $level->office()->name }}</div>
                                         </li>
                                     @endforeach
@@ -52,7 +55,11 @@
                                         <li class="list-group-item">
                                             {{ $position->name }}
                                             <br>
-                                            <strong>{{ $position->pivot->note }}</strong>
+                                            <strong>
+                                                លេខ {{ json_decode($position->pivot->note)->number }} 
+                                                ចុះថ្ងៃទី 
+                                                {{ json_decode($position->pivot->note)->dates }}
+                                            </strong>
                                         </li>
                                     @endforeach
                                 </ul>

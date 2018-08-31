@@ -19,16 +19,12 @@ Route::group(['middleware' => 'auth', 'prefix' => 'checking', 'namespace' => 'Ch
     
     Route::group(['as' => 'show.', 'prefix' => 'show'], function(){
         Route::get('/', 'CheckController@show')->name('index');
-        
         Route::get('/group/{group}', 'CheckController@showGroup')->name('group');
-        
         Route::get('/office/{office}', 'CheckController@showOffice')->name('office');
     });
     
     Route::get('/group/{group}', 'CheckController@group')->name('group');
-    
     Route::get('/office/{office}', 'CheckController@offices')->name('offices');
-
     Route::post('/office/{office}', 'CheckController@store');
 });
 
@@ -43,7 +39,6 @@ Route::group(['middleware' => 'auth', 'prefix' => 'part', 'namespace' => 'Part',
     
     Route::get('/create', 'PartController@show')->name('create');
     Route::post('/create', 'PartController@store');
-    
     Route::get('/{part}', 'PartController@index')->name('index');
     
 });

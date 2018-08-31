@@ -64,6 +64,10 @@ table.td-middle tr td{
 	text-decoration: underline;
 }
 
+.height25{
+	line-height: 25px;
+}
+
 img.tacteng-img{
 	width:90px;
 }

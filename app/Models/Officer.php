@@ -36,6 +36,13 @@ class Officer extends Model
             ->withTimestamps();
     }
     
+    public function ScopeGetPosition($q, $value)
+    {
+        $check = $q->where('position_id', $value);
+
+        return empty($this->part_id) ? $check->count() : '';
+    }
+
     public function positions()
     {
         return $this->belongsToMany(Position::class)

@@ -83,8 +83,8 @@
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $office->officers()->getPosition(3) }}</td>
+                                    <td>{{ $office->officers()->getPosition(4) }}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -101,9 +101,9 @@
                                         <td></td>
                                         <td></td>
                                         <td></td>
-                                        <td>{{ $part->position(6) }}</td>
-                                        <td>{{ $part->position(8) }}</td>
-                                        <td>{{ $part->position(10) }}</td>
+                                        <td>{{ $part->position(12) }}</td>
+                                        <td>{{ $part->position(13) }}</td>
+                                        <td>{{ $part->position(14) }}</td>
                                         <td></td>
                                     </tr>
                                 @endforeach

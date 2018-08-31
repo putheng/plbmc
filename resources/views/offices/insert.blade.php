@@ -9,7 +9,7 @@
                     {{ csrf_field() }}
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            Craete Officer
+                            Create Officer
                         </div>
                         
                         <div class="panel-body">
@@ -34,6 +34,7 @@
                                         @endforeach
                                      </optgroup>
                                     @endforeach
+                                    <option value="">រងការិយាល័យ</option>
                                 </select>
                             </div>
                             

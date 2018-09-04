@@ -21,7 +21,7 @@
                         </li>
                         <li class="list-group-item">
                             <strong>ភេទ :</strong>
-                            {{ $officer->gender }}
+                            {{ $officer->genders->name }}
                         </li>
                         <li class="list-group-item">
                             <strong>ឋានន្តរសក្តិ :</strong>
@@ -46,8 +46,9 @@
                         </li>
                         <li class="list-group-item">
                             <strong>ឋានៈ :</strong>
-                            {{ $officer->position->name }}
+                            {{ $officer->position->name }} 
                             <a class="pull-right" href="{{ route('officer.position', $officer) }}">Edit</a>
+                            <br>( {{ $officer->getPart() }} )
                             @if($officer->position->count())
                                 <br><br>
                                 <ul class="list-group">

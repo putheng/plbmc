@@ -14,6 +14,7 @@
                 <div class="panel-body">
                     {{ $officer->position->name }}
                     <a class="pull-right" href="{{ route('officer.show', $officer) }}">back</a>
+
                     <div class="form-group{{ $errors->has('level') ? ' has-error' : '' }}">
                         <label class="control-label"></label>
                         <select name="position" class="form-control">
@@ -31,15 +32,41 @@
                             </span>
                         @endif
                     </div>
-                    <div class="form-group{{ $errors->has('note') ? ' has-error' : '' }}">
-                        <label class="control-label">Note:</label>
-                        <textarea name="note" class="form-control"></textarea>
-                        @if($errors->has('note'))
+
+                    <div class="form-group">
+                        <label class="control-label">ការិយាល័យ</label>
+                        <select name="part" class="form-control">
+                            @foreach(\App\Models\Office::get() as $office)
+                                <optgroup label="{{ $office->name }}">
+                                    <option value="">{{ $office->name }}</option>
+                                    @foreach($office->parts as $part)
+                                        <option value="{{ json_encode(['part' => $part->id,'office' => $office->id,]) }}">{{ $part->name }}</option>
+                                    @endforeach
+                                </optgroup>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="form-group{{ $errors->has('number') ? ' has-error' : '' }}">
+                        <label class="control-label">លេខ:</label>
+                        <input value="{{ old('number') }}" type="text" name="number" class="form-control">
+                        @if($errors->has('number'))
                             <span class="help-block">
-                                {{ $errors->first('note') }}
+                                {{ $errors->first('number') }}
                             </span>
                         @endif
                     </div>
+
+                    <div class="form-group{{ $errors->has('date') ? ' has-error' : '' }}">
+                        <label class="control-label">ថ្ងៃទី:</label>
+                        <input value="{{ old('date') }}" type="text" name="date" class="form-control">
+                        @if($errors->has('date'))
+                            <span class="help-block">
+                                {{ $errors->first('date') }}
+                            </span>
+                        @endif
+                    </div>
+
                 </div>
                 
                 <div class="panel-footer">

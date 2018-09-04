@@ -3,9 +3,17 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-12 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading"> ជ្រើសរើសផែន </div>
+                <div class="panel-heading"> ជ្រើសរើសផែន 
+                <br>
+                    <form action="{{ route('checking.show.date') }}" method="get">
+                        <input type="date" name="from">
+                        <span class="font-sr">ដល់ដ្ងៃទី</span>
+                        <input type="date" name="to">
+                        <input type="submit" class="btn btn-sm btn-primary" value="Go">
+                    </form>
+                </div>
 
                 <div class="panel-body">
                     

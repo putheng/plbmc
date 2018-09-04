@@ -23,6 +23,25 @@ class Officer extends Model
     {
         return $this->belongsTo(Office::class);
     }
+
+    public function scopePO($q)
+    {
+        return $q->orderBy('position_id', 'asc')
+                ->orderBy('level_id', 'desc')
+                ->orderBy('identity', 'asc');
+    }
+
+    public function getStatus()
+    {
+        return OfficerStatus::whereDate('dates', request()->date)
+                ->where('officer_id', $this->id)
+                ->first();
+    }
+
+    public function genders()
+    {
+        return $this->hasOne(Gender::class, 'id', 'gender');
+    }
     
     public function level()
     {
@@ -48,6 +67,17 @@ class Officer extends Model
         return $this->belongsToMany(Position::class)
             ->withPivot(['note', 'office_id'])
             ->withTimestamps();
+    }
+
+    public function getPart()
+    {
+        return !empty($this->part_id) ? $this->part->name .' - ' . $this->office->name :
+        $this->office->name;
+    }
+
+    public function part()
+    {
+        return $this->belongsTo(Part::class);
     }
     
     public function position()

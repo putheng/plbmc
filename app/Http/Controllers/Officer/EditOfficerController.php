@@ -12,18 +12,29 @@ class EditOfficerController extends Controller
     {
         $this->validate($request, [
             'position' => 'required|exists:positions,id',
-            'note' => 'required'
+            'number' => 'required',
+            'date' => 'required'
         ]);
         
+        $value = json_decode($request->part);
+
         $officer->position_id = $request->position;
+        $officer->part_id = $value->part;
+        $officer->office_id = $value->office;
+
         $officer->save();
         
         $position = Position::find($request->position);
         $position->officers()->attach($officer);
         
+        $note = json_encode([
+            'number' => $request->number,
+            'dates' => $request->date
+        ]);
+
         $position->officers()->where('note', 'empty')
         ->updateExistingPivot($officer->id, [
-            'note' => $request->note,
+            'note' => $note,
         ]);
         
         return back()->withSuccess('Update successfuly!');

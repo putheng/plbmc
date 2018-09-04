@@ -78,7 +78,7 @@ class OfficerController extends Controller
                 }
             ])
             ->orderBy('position_id', 'asc')
-            ->orderBy('level_id', 'asc')
+            ->orderBy('level_id', 'desc')
             ->orderBy('identity', 'asc')
             ->get();
         

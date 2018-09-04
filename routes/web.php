@@ -19,6 +19,14 @@ Route::group(['middleware' => 'auth', 'prefix' => 'checking', 'namespace' => 'Ch
     
     Route::group(['as' => 'show.', 'prefix' => 'show'], function(){
         Route::get('/', 'CheckController@show')->name('index');
+
+        Route::get('/date', 'CheckController@date')->name('date');
+        Route::get('/date/on', 'CheckController@dateon')->name('on');
+        
+        Route::get('/dates/{office}', 'CheckController@officedate')->name('officedate');
+        Route::get('/date/{office}/{status}', 'CheckController@officeStatus')->name('officeStatus');
+        Route::get('/date/{status}', 'CheckController@status')->name('status');
+
         Route::get('/group/{group}', 'CheckController@showGroup')->name('group');
         Route::get('/office/{office}', 'CheckController@showOffice')->name('office');
     });

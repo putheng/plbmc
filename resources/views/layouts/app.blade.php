@@ -36,7 +36,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ url('/officer') }}">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
@@ -56,14 +56,17 @@
                         @else
                             <form class="navbar-form navbar-left">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="អត្ថលេខ">
+                                    <input type="text" id="searchid" class="form-control" placeholder="អត្ថលេខ">
                                 </div>
                             </form>
-                            <form class="navbar-form navbar-left">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="ឈ្មោះ">
-                                </div>
-                            </form>
+                            <li class="dropdown" id="toopen">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu" id="searchresult">
+                                </ul>
+                            </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     អវត្ថមាន <span class="caret"></span>
@@ -120,5 +123,25 @@
 
     <!-- Scripts -->
     <script src="/js/app.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#searchid').keyup(function(){
+                var value = $(this).val();
+                var html = '';
+
+                $.get('/api/search', {id:value}, function(data){
+                    
+                    $.each(data, function(i, item) {
+                        html += ('<li><a href="/officer/officer/'+ item.id +'">'+ item.name +'</a></li>');
+                    });
+
+                    $('#searchresult').html(html);
+                });
+
+                $('#toopen').addClass('open');
+            });
+
+        });
+    </script>
 </body>
 </html>

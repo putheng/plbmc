@@ -8,7 +8,8 @@ use App\Http\ViewComposers\{
     GroupComposer,
     OfficeComposer,
     OptionComposer,
-    OfficePartComposer
+    OfficePartComposer,
+    StatusComposer
 };
 
 class ComposerServiceProvider extends ServiceProvider
@@ -27,6 +28,8 @@ class ComposerServiceProvider extends ServiceProvider
         View::composer('officer.create', OptionComposer::class);
         
         View::composer('offices.insert', OfficePartComposer::class);
+
+        View::composer(['check.dateon', 'check.date'], StatusComposer::class);
     }
 
     /**
